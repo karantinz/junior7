@@ -1,14 +1,14 @@
 ﻿int minutesPerPerson = 10;
 int minutesInHour = 60;
 int peopleCount;
-int minutes;
-int hours;
+int currentMinutes;
+int currentHours;
 
 Console.Write("Введите количество людей в очереди: ");
 peopleCount = Convert.ToInt32(Console.ReadLine());
 
-minutes = peopleCount * minutesPerPerson;
-hours = minutes / minutesInHour;
-minutes %= minutesInHour;
+currentMinutes = peopleCount * minutesPerPerson;
+currentHours = currentMinutes / minutesInHour;
+currentMinutes %= minutesInHour;
 
-Console.WriteLine($"Вы должны отстоять в очереди {hours} час и {minutes} минут");
+Console.WriteLine($"Вы должны отстоять в очереди {currentHours} час и {currentMinutes} минут");
